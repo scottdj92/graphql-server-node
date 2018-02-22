@@ -1,0 +1,29 @@
+{
+  "name": "gql-server-poc",
+  "version": "1.0.0",
+  "description": "graphQL server POC",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run test",
+    "build": "tsc",
+    "dev": "concurrently \"tsc --watch --pretty\" \"node ./server.js\""
+  },
+  "keywords": [
+    "GraphQL"
+  ],
+  "author": "Scott Jones",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "@types/express": "^4.11.1",
+    "tslint": "^5.9.1",
+    "typescript": "^2.7.2"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "concurrently": "^3.5.1",
+    "express": "^4.16.2",
+    "graphql": "^0.13.1",
+    "graphql-server-express": "^1.3.2",
+    "graphql-tools": "^2.21.0"
+  }
+}

@@ -1,0 +1,9 @@
+# import Channel from "../types/channel/schema.graphql"
+
+type Query {
+    channels: [Channel]
+}
+
+type Mutation {
+    addChannel(name: String!): Channel
+}

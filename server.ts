@@ -1,14 +1,13 @@
 import * as express from "express";
 import { graphqlExpress, graphiqlExpress } from "graphql-server-express";
 import * as bodyParser from "body-parser";
-import { schema } from "./src/schema";
+import schema from "./src/schema";
+import * as cors from "cors";
 
 const PORT = 4000;
 const server = express();
 
-server.get("/", (req, res) => {
-    res.send("hello world");
-});
+server.use("*", cors({ origin: "http://localhost:3000"}));
 
 server.use("/graphql", bodyParser.json(), graphqlExpress({
     schema,
@@ -18,4 +17,4 @@ server.use("/graphiql", graphiqlExpress({
     endpointURL: "/graphql"
 }));
 
-server.listen(PORT, () => console.log("graphql now running on port 4000"));
+server.listen(PORT, () => console.log(`graphql now running on port ${PORT}`));

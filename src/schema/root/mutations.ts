@@ -1,12 +1,11 @@
-import { channels } from "../stub-data"
-let nextId = 3;
+import Channel from "../../../core/models/entities/Channel";
 
 export default {
     Mutation: {
         addChannel: (root, args) => {
-            const newChannel = { id: nextId++, name: args.name };
-            channels.push(newChannel);
-            return newChannel;
+            const newChannel = new Channel({name: args.name});
+            newChannel.save();
+            return newChannel.Model;
         }
     }
 }

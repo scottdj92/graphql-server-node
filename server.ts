@@ -4,6 +4,7 @@ import * as bodyParser from "body-parser";
 import schema from "./src/schema";
 import * as cors from "cors";
 import database from "./database";
+// tslint:disable-next-line:no-var-requires
 require("dotenv").config();
 
 database(process.env.DEFAULT_CONNECTION, true).then( () => {
@@ -17,7 +18,7 @@ database(process.env.DEFAULT_CONNECTION, true).then( () => {
     }));
 
     server.use("/graphiql", graphiqlExpress({
-        endpointURL: "/graphql"
+        endpointURL: "/graphql",
     }));
 
     server.listen(PORT, () => console.log(`graphql now running on port ${PORT}`));

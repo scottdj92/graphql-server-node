@@ -14,7 +14,9 @@
   "author": "Scott Jones",
   "license": "UNLICENSED",
   "devDependencies": {
+    "@types/date-fns": "^2.6.0",
     "@types/express": "^4.11.1",
+    "@types/sequelize": "^4.27.7",
     "dotenv": "^5.0.1",
     "tslint": "^5.9.1",
     "typescript": "^2.7.2"
@@ -23,6 +25,7 @@
     "body-parser": "^1.18.2",
     "concurrently": "^3.5.1",
     "cors": "^2.8.4",
+    "date-fns": "^1.29.0",
     "express": "^4.16.2",
     "graphql": "^0.13.1",
     "graphql-import": "^0.4.4",

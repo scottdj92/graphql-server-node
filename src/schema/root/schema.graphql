@@ -2,6 +2,7 @@
 
 type Query {
     channels: [Channel]
+    findChannelById(id: Int): Channel
 }
 
 type Mutation {

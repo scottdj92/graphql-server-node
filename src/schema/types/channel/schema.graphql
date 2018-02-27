@@ -1,4 +1,7 @@
+# import Metadata from "../metadata/schema.graphql"
+
 type Channel {
-    id: ID!
+    id: Int!
     name: String
+    metadata: Metadata
 }

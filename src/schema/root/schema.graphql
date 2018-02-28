@@ -1,4 +1,5 @@
 # import Channel from "../types/channel/schema.graphql"
+# import NewChannel from "../inputs/NewChannel.graphql"
 
 type Query {
     channels: [Channel]
@@ -6,5 +7,9 @@ type Query {
 }
 
 type Mutation {
-    addChannel(name: String!): Channel
+    addChannel(channel: NewChannel!): Channel
+}
+
+type Subscription {
+    channelAdded(channelId: Int!): Channel
 }

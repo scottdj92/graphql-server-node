@@ -1,0 +1,4 @@
+input NewChannel {
+    name: String
+    createdBy: String
+}

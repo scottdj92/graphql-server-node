@@ -2,8 +2,11 @@ import Metadata from "../../.../../../../core/models/entities/Metadata";
 
 export default {
     Metadata: {
-        dateCreated: async (parent: Metadata, args) => {
-            return parent.dateCreated;
+        createdAt: async (parent: Metadata, args) => {
+            return parent.createdAt;
+        },
+        createdBy: async (parent: Metadata, args) => {
+            return parent.createdBy;
         },
     },
 };

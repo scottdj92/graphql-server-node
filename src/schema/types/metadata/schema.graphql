@@ -1,3 +1,4 @@
 type Metadata {
-    dateCreated: String
+    createdBy: String
+    createdAt: String
 }

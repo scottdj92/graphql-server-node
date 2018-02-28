@@ -8,7 +8,7 @@ export default {
             const newChannel = new Channel({
                 name: args.name,
                 metadata: [{
-                    dateCreated: currentDate.toISOString(),
+                    createdBy: "Scott Jones",
                 }],
             }, {include: [{ model: MetaData }]});
             return await newChannel.save();

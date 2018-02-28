@@ -4,7 +4,7 @@ import Channel from "./Channel";
 @Table
 class Metadata extends Model<Metadata> {
     @Column
-    public dateCreated: Date;
+    public createdBy: string;
     @Column
     @ForeignKey(() => Channel)
     public channelId: number;
